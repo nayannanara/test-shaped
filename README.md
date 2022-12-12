@@ -6,6 +6,13 @@ A API contém duas entidades: Paciente e Exame, a fim de testes.
 
 Para executar o projeto, utilizei o `docker`, com python na versão >3.10.
 
+Antes, crie um arquivo `.env` na raiz do projeto, crie a variável `DEBUG` E `SECRET_KEY`. então gere uma chave aleatoria da seguinte forma:
+```
+from django.core.management.utils import get_random_secret_key
+print(get_random_secret_key())
+```
+Em seguida, set o `SECRET_KEY` com o valor obtido e `DEBUG`, como `True` ou `False`.
+
 Execute o comando:
 ```
 docker-compose up -d
